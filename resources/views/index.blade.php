@@ -28,15 +28,17 @@
                 <h4><em>Most Popular</em> Right Now</h4>
               </div>
               <div class="row">
-                @foreach ( $results as $result )
+                @foreach ( $results['data'] as $result )
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <img src="https://image.tmdb.org/t/p/w500/{{ $result->poster_path }}" alt="">
-                    <h4>{{ $result->original_title }}<br><span>Sandbox</span></h4>
+                    <h4>{{ $result->original_title }}<br>
+                    </h4>
                     <div>
                       <p><i class="fa fa-star"></i> {{ $result->vote_average }}</p>
-                      <p><i class="fa fa-download"></i> 2.3M</p>
+                      <p><i class="fa fa-calendar"></i> {{ $result->release_date }}</p>
                     </div>
+                    <a href="{{ route('detail', $result->id ) }}">Detail Movie</a>
                   </div>
                 </div>
                 @endforeach

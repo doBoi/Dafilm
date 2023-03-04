@@ -1,12 +1,16 @@
 <header class="absolute header-area header-sticky">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-md-12">
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <div class="text-center mt-2 logo">
             <h4>
-              <em>DAFILM</em>
+              <em>
+                <a @if ($results['title']==0) class="active" @endif href="{{ route('home') }}">
+                  DAFILM
+                </a>
+              </em>
               <h4>
           </div>
           <!-- ***** Logo End ***** -->
@@ -21,10 +25,20 @@
           <!-- ***** Search End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="browse.html">Browse</a></li>
-            <li><a href="details.html">Details</a></li>
-            <li><a href="streams.html">Streams</a></li>
+            <li>
+              <a @if ($results['title']=='Home' ) class="active" @endif href="{{ route('home') }}">Home</a>
+            </li>
+            <li>
+              <a @if ($results['title']=='Top Rated' ) class="active" @endif href="{{ route('toprated') }}">Top
+                Rated</a>
+            </li>
+            <li>
+              <a @if ($results['title']=='Up Coming' ) class="active" @endif href="{{ route('upcoming') }}">Upcoming</a>
+            </li>
+            <li>
+              <a @if ($results['title']=='Now Playing' ) class="active" @endif href="{{ route('nowplaying') }}">Now
+                Playing</a>
+            </li>
           </ul>
           <!-- ***** Menu End ***** -->
         </nav>

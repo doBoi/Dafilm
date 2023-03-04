@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DafilmController::class, 'index'],)->name('home');
+Route::get('/', [DafilmController::class, 'trending'],)->name('home');
+Route::get('/toprated', [DafilmController::class, 'top_rated'],)->name('toprated');
+Route::get('/nowplaying', [DafilmController::class, 'now_playing'],)->name('nowplaying');
+Route::get('/upcoming', [DafilmController::class, 'upcoming'],)->name('upcoming');
+Route::get('/detail/{id}', [DafilmController::class, 'detail'],)->name('detail');
 Route::get('/test', [DafilmController::class, 'test'],)->name('test');
