@@ -13,7 +13,7 @@ Dafilm - Sebuah aplikasi website yang menampilkan data film dari API TMDb.
 clone dafilm with composer
 
 ```bash
-    git clone https://github.com/nama-akun/nama-proyek.git
+    git clone https://github.com/doBoi/Dafilm.git
 ```
 
 ‌Masuk ke direktori proyek:
