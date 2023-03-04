@@ -5,10 +5,10 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <div class="page-content">
+      <div class="page-content py-3">
 
         <!-- ***** Banner Start ***** -->
-        <div class="main-banner">
+        <div class="main-banner ">
           <div class="row">
             <div class="col-lg-7">
               <div class="header-text">

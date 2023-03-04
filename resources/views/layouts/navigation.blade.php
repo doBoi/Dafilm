@@ -7,7 +7,7 @@
           <div class="text-center mt-2 logo">
             <h4>
               <em>
-                <a @if ($results['title']==0) class="active" @endif href="{{ route('home') }}">
+                <a class="text-danger" href="{{ route('home') }}">
                   DAFILM
                 </a>
               </em>
@@ -40,6 +40,9 @@
                 Playing</a>
             </li>
           </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
           <!-- ***** Menu End ***** -->
         </nav>
       </div>
